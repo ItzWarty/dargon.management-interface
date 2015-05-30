@@ -37,6 +37,8 @@ namespace Dargon.Management {
          hostAndPortTextBox.PreviewKeyDown += (s, e) => {
             if (e.KeyCode == Keys.Enter) {
                HandleConnectClicked();
+            } else if (e.KeyCode == Keys.Escape) {
+               Close();
             }
          };
          // errorLabel autoresizes to fit text, so we limit its width
